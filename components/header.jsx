@@ -9,6 +9,7 @@ import { Button } from "./ui/button";
 import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { useStoreUser } from "@/hooks/use-store-user";
 import { Authenticated, Unauthenticated } from "convex/react";
+import { LayoutDashboard } from "lucide-react";
 
 export default function Header() {
   const { isLoading } = useStoreUser();
@@ -72,6 +73,13 @@ export default function Header() {
           </Unauthenticated>
 
           <Authenticated>
+            <Link href="/dashboard">
+              <Button variant="glass" className="hidde sm:fle">
+                <LayoutDashboard className="h-4 w-4" />
+                <span className="hidden md:flex">Dashboard</span>
+              </Button>
+            </Link>
+
             <UserButton
               appearance={{
                 elements: {
