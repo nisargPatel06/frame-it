@@ -3,18 +3,9 @@ import HeroSection from "@/components/hero";
 import InteractiveStats from "@/components/interactive-stats";
 import Pricing from "@/components/pricing";
 import { Button } from "@/components/ui/button";
-import { useAnimatedCounter } from "@/hooks/use-landing-hooks";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const stats = [
-    { label: "Images Processed", value: 10000, suffix: "+" },
-    { label: "Active Users", value: 500, suffix: "+" },
-    { label: "AI Transformations", value: 45000, suffix: "+" },
-    { label: "User Satisfaction", value: 98, suffix: "%" },
-  ];
-
   return (
     <div className="pt-36">
       {/* Hero */}

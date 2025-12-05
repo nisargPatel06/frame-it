@@ -81,7 +81,7 @@ const FeaturesSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <FeatureCard key={index} {...feature} delay={index * 100} />
+            <FeatureCard key={index} {...feature} delay={index * 50} />
           ))}
         </div>
       </div>
