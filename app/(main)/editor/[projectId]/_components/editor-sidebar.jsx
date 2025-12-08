@@ -17,7 +17,7 @@ import { useCanvas } from "@/context/context";
 // import { AIExtenderControls } from "./_tools/ai-extend";
 import { ResizeControls } from "./_tools/resize";
 // import { AIEdit } from "./_tools/ai-edit";
-// import { CropContent } from "./_tools/crop";
+import { CropContent } from "./_tools/crop";
 
 const TOOL_CONFIGS = {
   resize: {
@@ -91,8 +91,8 @@ export function EditorSidebar({ project }) {
 
 function renderToolContent(activeTool, project) {
   switch (activeTool) {
-    // case "crop":
-    //   return <CropContent />;
+    case "crop":
+      return <CropContent />;
     case "resize":
       return <ResizeControls project={project} />;
     case "adjust":
