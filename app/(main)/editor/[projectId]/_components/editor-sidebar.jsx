@@ -11,9 +11,9 @@ import {
   Eye,
 } from "lucide-react";
 import { AdjustControls } from "./_tools/adjust";
-// import { BackgroundControls } from "./_tools/background-controls";
+import { BackgroundControls } from "./_tools/background-controls";
 import { useCanvas } from "@/context/context";
-// import { TextControls } from "./_tools/text";
+import { TextControls } from "./_tools/text";
 // import { AIExtenderControls } from "./_tools/ai-extend";
 import { ResizeControls } from "./_tools/resize";
 // import { AIEdit } from "./_tools/ai-edit";
@@ -97,12 +97,12 @@ function renderToolContent(activeTool, project) {
       return <ResizeControls project={project} />;
     case "adjust":
       return <AdjustControls />;
-    // case "background":
-    //   return <BackgroundControls project={project} />;
+    case "background":
+      return <BackgroundControls project={project} />;
     // case "ai_extender":
     //   return <AIExtenderControls project={project} />;
-    // case "text":
-    //   return <TextControls />;
+    case "text":
+      return <TextControls />;
     // case "ai_edit":
     //   return <AIEdit project={project} />;
     default:
